@@ -1,0 +1,102 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conexão Solidária</title>
+
+    <link rel="stylesheet" href="{% static 'login/LogStyle.css' %}">
+    
+    <link rel="icon" type="image/png" sizes="16x16"  href="{% static 'login/logFavicon.png' %}">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+
+</head>
+<body>
+
+<!--Cabeçalho-NÃO EDITE ISSO-->
+<header>
+    <nav class="navbar">
+
+        <!-- LOGO -->
+        <div class="logo">
+        <img class="img-logo" src="{% static 'login/logLogo.svg' %}">
+        <a href="{% url 'url-home' %}" class="name-logo">Conexão Solidária</a>
+        </div>
+    
+        <!-- LINKS -->
+        <div>
+            <!-- NAVEGAÇÃO MENU -->
+            <ul class="nav-links">
+                <!-- CHECKBOX -->
+                <input type="checkbox" id="checkbox_toggle" />
+                <label for="checkbox_toggle" class="hamburger">&#9776; </label>
+                <!-- NAVEGAÇÃO MENUS -->
+                <div class="menu">
+                    <li><a class="itens" href="{% url 'url-start' %}">Início</a></li>
+                    <li><a class="itens" href="{% url 'url-help' %}">Como Usar</a></li>
+                    <li><a class="itens" href="{% url 'url-class' %}">Sobre Nós</a></li>
+                    <li class="mob-buttons" ><a class="itens" href="{% url 'url-log' %}">Login</a></li>
+                    <li class="mob-buttons" ><a class="itens" href="{% url 'url-cad' %}">Cadastrar</a></li>
+                </div>
+            </ul>
+        </div>
+
+        <div class="menu">
+            <a class="nav-buttons" href="{% url 'url-log' %}">Login</a>
+            <a class="nav-buttons" href="{% url 'url-cad' %}">Cadastrar</a>
+        </div>
+    
+</nav>
+
+</header>
+<!--Cabeçalho-NÃO EDITE ANTES DISSO-->
+
+<!--Corpo-->
+
+<section class="section-form">
+
+            <div class="form-login">
+                
+             <form id="form" class= form-content action="#" method="post">
+
+                    <div class="form-header">
+                        <h1 class="title">Login</h1>
+                    </div>
+
+
+                    <div class="input-group">
+        
+                        <div class="input-box">
+                            <span class="details">Nome de Usuário:</span>
+                            <input id="username" type="text" name="username" max required>
+                        </div>
+        
+                        <div class="input-box">
+                            <span class="details">Senha:</span>
+                            <input class="password" onchange="confereSenha()"  type="password" name="password" minlength="5" maxlength="10"  required>
+                        </div>
+        
+                    </div>
+
+                    <div class="msg-container"> 
+                        <p class="msg">Os dados serão usados para fins demonstrativos. Por favor, não forneça informações que possam comprometer sua privacidade.</p>
+                    </div>
+        
+                    <div class="form-button-container">
+                        <button type="submit" class="form-button">Entrar</button>
+                    </div>
+                    
+                </form>
+            </div>
+
+    
+
+</section>
+<!--Corpo-->
+
+
+</body>
+</html>

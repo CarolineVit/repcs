@@ -1,0 +1,60 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conexão Solidária</title>
+
+    <link rel="icon" type="image/png" sizes="16x16"  href="{% static 'homepage/navFavicon.png' %}">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+
+    <!--Estilização-->
+    <link rel="stylesheet" href="{% static 'homepage/navStyle.css' %}">
+
+
+</head>
+<body>
+    
+    <header>
+        <nav class="navbar">
+
+            <!-- LOGO -->
+            <div class="logo">
+            <img class="img-logo" src="{% static 'homepage/navbarLogo.svg' %}">
+            <a href="{% url 'url-home' %}" class="name-logo">Conexão Solidária</a>
+            </div>
+        
+            <!-- LINKS -->
+            <div>
+                <!-- NAVEGAÇÃO MENU -->
+                <ul class="nav-links">
+                    <!-- CHECKBOX -->
+                    <input type="checkbox" id="checkbox_toggle" />
+                    <label for="checkbox_toggle" class="hamburger">&#9776; </label>
+                    <!-- NAVEGAÇÃO MENUS -->
+                    <div class="menu">
+                        <li><a class="itens" href="{% url 'url-start' %}">Início</a></li>
+                        <li><a class="itens" href="{% url 'url-help' %}">Como Usar</a></li>
+                        <li><a class="itens" href="{% url 'url-class' %}">Sobre Nós</a></li>
+                        <li class="mob-buttons" ><a class="itens" href="{% url 'url-log' %}">Login</a></li>
+                        <li class="mob-buttons" ><a class="itens" href="{% url 'url-cad' %}">Cadastrar</a></li>
+                    </div>
+                </ul>
+            </div>
+
+            <div class="menu">
+                <a class="nav-buttons" href="{% url 'url-log' %}">Login</a>
+                <a class="nav-buttons" href="{% url 'url-cad' %}">Cadastrar</a>
+            </div>
+        
+    </nav>
+
+    </header>
+
+
+</body>
+</html>
